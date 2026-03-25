@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Project — ContactHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div class="brand-icon">&#128101;</div>
+    <span>ContactHub</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Contacts</a>
+    <a href="about-project.html" class="active">About</a>
+    <a href="developers.html">Developers</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="about-hero">
+    <h1>&#128101; ContactHub</h1>
+    <p>A JavaScript-based interactive Contact List Manager.</p>
+  </div>
+
+  <!-- PURPOSE -->
+  <div class="card">
+    <div class="card-title">&#127919; Purpose of the System</div>
+    <p style="font-size:14px;color:#4b5563;line-height:1.8;">
+      ContactHub is designed to help users efficiently manage their personal and professional contacts in one place.
+      The system allows users to add, search, edit, and delete contact records directly in the browser without
+      requiring any server or database. It demonstrates core JavaScript DOM manipulation and event-driven
+      programming concepts taught in ITEL 203.
+    </p>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="card">
+    <div class="card-title">&#9889; System Features</div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">&#10010;</div>
+        <h4>Add Contacts</h4>
+        <p>Add new contacts with name, phone, and email through a validated input form.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">&#128269;</div>
+        <h4>Live Search</h4>
+        <p>Instantly filter contacts by name, phone, or email as you type.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">&#9998;</div>
+        <h4>Edit Records</h4>
+        <p>Update any contact's information using the inline edit form.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">&#128465;</div>
+        <h4>Delete with Confirm</h4>
+        <p>Remove contacts safely with a confirmation modal to prevent accidents.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">&#10006;</div>
+        <h4>Clear Form</h4>
+        <p>Reset all input fields instantly with the clear button.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">&#9989;</div>
+        <h4>Form Validation</h4>
+        <p>All fields are validated — name length, phone format, and email format.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECHNOLOGIES -->
+  <div class="card">
+    <div class="card-title">&#128736; Technologies Used</div>
+    <div class="tech-tags" style="margin-bottom:16px;">
+      <span class="tech-tag">HTML</span>
+      <span class="tech-tag">CSS</span>
+      <span class="tech-tag">JavaScript</span>
+      <span class="tech-tag">DOM Manipulation</span>
+      <span class="tech-tag">Event Handling</span>
+      <span class="tech-tag">Form Validation</span>
+      <span class="tech-tag">Github</span>
+      <span class="tech-tag">VS Code</span>
+    </div>
+    <p style="font-size:13px;color:#6b7280;">No external libraries or frameworks were used — pure vanilla HTML, CSS, and JavaScript.</p>
+  </div>
+
+  <!-- JS CONCEPTS -->
+     <div class="card">
+    <div class="card-title">&#128187; JavaScript Concepts Demonstrated</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px;font-size:13px;">
+        <code style="color:#2563eb;font-weight:700;">document.getElementById()</code>
+        <p style="color:#6b7280;margin-top:4px;">Used to reference all form inputs, buttons, and table elements.</p>
+      </div>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px;font-size:13px;">
+        <code style="color:#2563eb;font-weight:700;">querySelector()</code>
+        <p style="color:#6b7280;margin-top:4px;">Used to select edit and delete buttons within dynamically created rows.</p>
+      </div>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px;font-size:13px;">
+        <code style="color:#2563eb;font-weight:700;">addEventListener()</code>
+        <p style="color:#6b7280;margin-top:4px;">Attached to buttons and inputs for click and input events throughout the app.</p>
+      </div>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px;font-size:13px;">
+        <code style="color:#2563eb;font-weight:700;">createElement()</code>
+        <p style="color:#6b7280;margin-top:4px;">Each table row is dynamically created using createElement("tr").</p>
+      </div>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px;font-size:13px;">
+        <code style="color:#2563eb;font-weight:700;">appendChild()</code>
+        <p style="color:#6b7280;margin-top:4px;">New rows are appended to the table body after creation.</p>
+      </div>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px;font-size:13px;">
+        <code style="color:#2563eb;font-weight:700;">remove() / filter()</code>
+        <p style="color:#6b7280;margin-top:4px;">Contacts are removed from the data array and the table is re-rendered.</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+</div>
+
+<footer>
+  &copy; 2026 ContactHub &mdash; ITEL 203 Group Performance Task &middot; Contact List Manager
+</footer>
+
+</body>
+</html>

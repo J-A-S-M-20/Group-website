@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact List Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div class="brand-icon">&#128101;</div>
+    <span>ContactHub</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Contacts</a>
+    <a href="about-project.html">About</a>
+    <a href="developers.html">Developers</a>
+  </div>
+</nav>
+
+<!-- MAIN PAGE -->
+<div class="page">
+  <div class="page-header">
+    <h1>Contact List Manager</h1>
+    <p>Add, search, edit, and manage your contacts in one place.</p>
+  </div>
+
+  <!-- ADD / EDIT FORM -->
+  <div class="card">
+    <div class="card-title">
+      <span>&#10010;</span>
+      <span id="form-title">Add New Contact</span>
+    </div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="inputName">Full Name</label>
+        <input type="text" id="inputName" placeholder="e.g. Juan Dela Cruz" />
+        <span class="error-msg" id="errName"></span>
+      </div>
+      <div class="form-group">
+        <label for="inputPhone">Phone Number</label>
+        <input type="text" id="inputPhone" placeholder="e.g. 09171234567" />
+        <span class="error-msg" id="errPhone"></span>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">Email Address</label>
+        <input type="email" id="inputEmail" placeholder="e.g. example@gmail.com" />
+        <span class="error-msg" id="errEmail"></span>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-primary" id="btnSubmit">&#10010; Add Contact</button>
+      <button class="btn btn-secondary" id="btnClear">&#10006; Clear</button>
+      <button class="btn btn-warning" id="btnCancelEdit" style="display:none;">&#9003; Cancel Edit</button>
+    </div>
+  </div>
+
+  <!-- SEARCH + STATS -->
+  <div class="toolbar">
+    <div class="search-box">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" id="searchInput" placeholder="Search by name, phone, or email..." />
+    </div>
+    <div class="stat-badge" id="statBadge">0 contacts</div>
+  </div>
+
+  <!-- CONTACTS TABLE -->
+  <div class="card" style="padding:0; overflow:hidden;">
+    <div class="table-wrapper">
+      <table id="contactTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="contactBody">
+          <!-- rows injected by JS -->
+        </tbody>
+      </table>
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">&#128101;</div>
+        <p>No contacts found. Add one above!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DELETE CONFIRM MODAL -->
+<div class="modal-overlay" id="deleteModal">
+  <div class="modal">
+    <h3>Delete Contact?</h3>
+    <p id="deleteModalText">This contact will be permanently removed.</p>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" id="btnCancelDelete">Cancel</button>
+      <button class="btn btn-danger"    id="btnConfirmDelete">Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<footer>
+  &copy; 2026 ContactHub &mdash; ITEL 203 Group Performance Task &middot; Contact List Manager
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
